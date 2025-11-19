@@ -1,0 +1,18 @@
+[package]
+name = "bevy_sniper_duel"
+version = "0.1.0"
+edition = "2024"
+
+# 除非在发布时需要，否则在开发期间启用此功能以加快编译速度
+# see https://bevyengine.org/learn/book/getting-started/setup/#enable-fast-compiles-optional
+[profile.dev]
+opt-level = 1
+[profile.dev.package."*"]
+opt-level = 3
+
+[dependencies]
+bevy = { version = "0.13", features = ["jpeg", "mp3", "vorbis"] }
+rand = "0.8.5"
+tokio = { version = "1", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+bincode = "1.3"
